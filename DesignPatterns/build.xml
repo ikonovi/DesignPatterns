@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="DesignPatterns" default="run">
+
+	<property file="build.properties" />
+
+	<path id="JavaBuildPath">
+		<!--fileset dir="lib" id="lib">
+			<include name="**/*.jar" />
+		</fileset -->
+	</path>
+
+	<!-- - - - - - - - - - - - - - - - - - 
+          target: ant-test                      
+         - - - - - - - - - - - - - - - - - -->
+    <target name="ant-test">
+    		<echo>Ant test passed.</echo>
+    </target>
+	
+	
+	<!-- ================================= 
+          target: clean              
+         ================================= -->
+	<target name="clean">
+		<delete dir="${bin.includes}" />
+	</target>
+
+	<!-- ================================= 
+	          target: compile              
+	     ================================= -->
+	<target name="compile" depends="clean">
+		<mkdir dir="${bin.includes}" />
+		<javac srcdir="${src.includes}" destdir="${bin.includes}" includeantruntime="false" />
+	</target>
+
+	<!-- ================================= 
+	          target: jar              
+	     ================================= -->
+	<target name="jar" depends="compile">
+		<mkdir dir="${output}" />
+		<jar destfile="${output}/${ant.project.name}.jar" basedir="${bin.includes}">
+			<manifest>
+				<attribute name="Main-Class" value="_9_Strategy._ik.StrategyUML" />
+				<attribute name="Created-By" value="${ant.version}" />
+				<attribute name="Built-By" value="${user.name}" />
+				<attribute name="Build-Jdk" value="${java.version} (${java.vm.specification.vendor})" />
+			</manifest>
+		</jar>
+	</target>
+
+	<!-- ================================= 
+	          target: run              
+	     ================================= -->
+	<target name="run" depends="jar">
+		<java jar="${output}/${ant.project.name}.jar" fork="true">
+			<classpath>
+				<path refid="JavaBuildPath" />
+			</classpath>
+		</java>
+	</target>
+
+</project>
