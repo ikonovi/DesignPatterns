@@ -16,8 +16,6 @@ class DecoratorPatternApp1 {
 /**
  * Plays role of Component interface in the pattern.
  * 
- * @author ikonovi
- *
  */
 interface Printer {
 
@@ -28,8 +26,6 @@ interface Printer {
 /**
  * Plays role of component in Decorator pattern.
  * 
- * @author ikonovi
- *
  */
 class PrinterComponentWorld implements Printer {
 
