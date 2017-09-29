@@ -2,21 +2,34 @@
 <project name="DesignPatterns" default="run">
 
 	<property file="build.properties" />
+	<property environment="env" />
 
 	<path id="JavaBuildPath">
 		<!--fileset dir="lib" id="lib">
-			<include name="**/*.jar" />
-		</fileset -->
+			<include name="*"/>
+		</fileset-->
+		<!--dirset dir="lib" id="targetDir" /-->
+		<!--filelist dir="lib" files="list-file*.jar" id="jarsList">
+			<file name="list-file1.jar" />
+		</filelist-->
+		<pathelement location="${env.webdriver.chrome.driver}" />
+		<fileset dir="${env.MAVEN_HOME}" id="thirdsideDir">
+			<include name="**" />		<!-- ** - files in all subdirs -->
+			<exclude name="bin/*" />	<!-- * - files in current dir --> 
+			<exclude name="conf/**" />
+			<exclude name="lib/**" />
+		</fileset>
 	</path>
 
 	<!-- - - - - - - - - - - - - - - - - - 
-          target: ant-test                      
+          target: print-paths                      
          - - - - - - - - - - - - - - - - - -->
-    <target name="ant-test">
-    		<echo>Ant test passed.</echo>
-    </target>
-	
-	
+	<target name="print-paths">
+		<pathconvert property="pathRef" refid="JavaBuildPath" pathsep="${line.separator}" />
+		<echo>Paths:</echo>
+		<echo>${pathRef}</echo>
+	</target>
+
 	<!-- ================================= 
           target: clean              
          ================================= -->
