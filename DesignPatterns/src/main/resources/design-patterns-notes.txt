@@ -82,17 +82,17 @@ This is done by creating objects by calling a factory method—either specified 
 
 
 ----------------------------------------------------------------------------------
-        Structural (Структурные) -  рассматривается вопрос о том, как из классов и 
+        Structural (Структурные) -  рассматривается вопрос о том, как из классов и
         объектов образуются более крупные структуры
 ----------------------------------------------------------------------------------
 
 4. Декоратор (Decorator)
 
-предназначенный для динамического подключения дополнительного поведения к объекту. 
-Шаблон Декоратор предоставляет гибкую альтернативу практике создания подклассов 
+предназначенный для динамического подключения дополнительного поведения к объекту.
+Шаблон Декоратор предоставляет гибкую альтернативу практике создания подклассов
 с целью расширения функциональности.
 
-Attach additional responsibilities to an object dynamically keeping the same interface. 
+Attach additional responsibilities to an object dynamically keeping the same interface.
 Decorators provide a flexible alternative to subclassing for extending functionality.
 
 
@@ -102,21 +102,21 @@ Decorators provide a flexible alternative to subclassing for extending functiona
   Способ решения:
 Адаптер предусматривает создание класса-оболочки с требуемым интерфейсом.
   Участники:
-Класс Adapter приводит интерфейс класса Adaptee в соответствие с 
-интерфейсом класса Target (наследником которого является Adapter). 
-Это позволяет объекту Client использовать объект Adaptee (посредством адаптера Adapter) так, 
-словно он является экземпляром класса Target. 
-Таким образом Client обращается к интерфейсу Target, реализованному в наследнике Adapter, 
+Класс Adapter приводит интерфейс класса Adaptee в соответствие с
+интерфейсом класса Target (наследником которого является Adapter).
+Это позволяет объекту Client использовать объект Adaptee (посредством адаптера Adapter) так,
+словно он является экземпляром класса Target.
+Таким образом Client обращается к интерфейсу Target, реализованному в наследнике Adapter,
 который перенаправляет обращение к Adaptee.
 
-Шаблон Адаптер позволяет в процессе проектирования не принимать во внимание возможные различия в 
-интерфейсах уже существующих классов. Если есть класс, обладающий требуемыми методами и свойствами 
-(по крайней мере, концептуально), то при необходимости всегда можно воспользоваться 
-шаблоном Адаптер для приведения его интерфейса к нужному виду. Близким Адаптеру 
+Шаблон Адаптер позволяет в процессе проектирования не принимать во внимание возможные различия в
+интерфейсах уже существующих классов. Если есть класс, обладающий требуемыми методами и свойствами
+(по крайней мере, концептуально), то при необходимости всегда можно воспользоваться
+шаблоном Адаптер для приведения его интерфейса к нужному виду. Близким Адаптеру
 является шаблон Фасад, не всегда можно отличить один от другого.
 
-Converts one interface to another so that it matches what the client is expecting. 
- 
+Converts one interface to another so that it matches what the client is expecting.
+
 
 6. Фасад (Facade)
 - Скрыть сложную внутреннюю реализацию и предоставить простой интерфейс
@@ -124,7 +124,7 @@ Converts one interface to another so that it matches what the client is expectin
 - Более высокий уровень использования системы
 - Можно обращаться и к самим внутренним объектам (без фасада)
 
-Provide a unified interface to a set of interfaces in a subsystem. 
+Provide a unified interface to a set of interfaces in a subsystem.
 Facade defines a higher-level interface that makes the subsystem easier to use.
 
 
@@ -171,4 +171,28 @@ Facade - Provides a simplified interface.
   - Это позволяет отказаться от использования переключателей и/или условных операторов.
   - Вызов всех алгоритмов должен осуществляться стандартным образом (все они должны иметь одинаковый интерфейс).
 
++ 10. Command (Команда)
+
+  on wiki - en
+    Для обработки команды в виде объекта
+    Четыре термина:
+      приёмник команд (receiver),
+      команды (command),
+      вызывающий команды (invoker),
+      клиент (client).
+
+  on wiki - en
+Four terms always associated with the command pattern are command, receiver, invoker and client. A command object knows about receiver and invokes a method of the receiver. Values for parameters of the receiver method are stored in the command, the receiver object to execute these methods is also stored in the command object by aggregation. The receiver then does the work when the execute() method in command is called. An invoker object knows how to execute a command, and optionally does bookkeeping about the command execution. The invoker does not know anything about a concrete command, it knows only about command interface. Invoker object(s), command objects and receiver objects are held by a client object, the client decides which receiver objects it assigns to the command objects, and which commands it assigns to the invoker. The client decides which commands to execute at which points. To execute a command, it passes the command object to the invoker object.
+
+What problems can the Command design pattern solve?
+    * Coupling the invoker of a request to a particular request should be avoided. That is, hard-wired requests should be avoided.
+    * It should be possible to configure an object (that invokes a request) with a request.
+
+Implementing (hard-wiring) a request directly into a class is INflexible because it couples the class to a particular request at compile-time, which makes it impossible to specify a request at run-time.
+
+What solution does the Command design pattern describe?
+    * Define separate (command) objects that encapsulate a request.
+    * A class delegates a request to a command object instead of implementing a particular request directly.
+
+This enables to configure a class with a command object that is used to perform a request. The class is no longer coupled to a particular request and has no knowledge (is independent) of how the request is carried out.
 
