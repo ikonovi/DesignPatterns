@@ -16,6 +16,7 @@ interface Strategy {
 
 class ConcreteStrategy1 implements Strategy {
 
+	@Override
 	public void algorithm() {
 		System.out.println("algorithm of Strategy 1");
 	}
@@ -24,6 +25,7 @@ class ConcreteStrategy1 implements Strategy {
 
 class ConcreteStrategy2 implements Strategy {
 
+	@Override
 	public void algorithm() {
 		System.out.println("algorithm of Strategy 2");
 	}

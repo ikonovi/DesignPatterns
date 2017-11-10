@@ -1,8 +1,6 @@
-package _9_Strategy.start;
+package _9_Strategy.example1;
 
-import _9_Strategy.auth.UserChecker;
 import java.io.File;
-import _9_Strategy.strategy.*;
 
 public class Main {
 

@@ -1,6 +1,6 @@
-package _9_Strategy.auth;
+package _9_Strategy.example1;
 
-import _9_Strategy.strategy.AuthStrategy;
+import _9_Strategy.example1.AuthStrategy;
 
 public class UserChecker {
 

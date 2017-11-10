@@ -1,4 +1,6 @@
-package _9_Strategy.strategy;
+package _9_Strategy.example1;
+
+import _9_Strategy.example1.AuthStrategy;
 
 @SuppressWarnings("unused")
 public class DBAuth implements AuthStrategy {
