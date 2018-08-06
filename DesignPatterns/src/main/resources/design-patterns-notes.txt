@@ -149,6 +149,14 @@ Facade - Provides a simplified interface.
 Объект меняет свое поведение в зависимости от своего состояния.
 Позволяет избегать многочисленных условий if.
 
+Поведение объекта определяется его состоянием. - IK
+
+In this pattern, an object can be in exactly one of a fixed number of states, and transition between them causes changes in the object’s behavior.
+
+"Elegantly manage state transitions without large switches or numerous if statements." - Ian Darwin.
+
+The pattern will “allow an object to alter its behavior when its internal state changes. 
+The object will appear to change its class.” - “Gang of Four” book Design Patterns: Elements of Reusable Object-Oriented Software
 
 9. Strategy (Стратегия), Policy
 

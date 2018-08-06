@@ -22,14 +22,14 @@ interface State {
 class StateA implements State {
 	@Override
 	public void handle() {
-		System.out.println("Handle state A");
+		System.out.println("Handle the state A");
 	}
 }
 
 class StateB implements State {
 	@Override
 	public void handle() {
-		System.out.println("Handle state B");
+		System.out.println("Handle the state B");
 	}
 }
 
