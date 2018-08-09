@@ -3,13 +3,14 @@ From the course:	Programming Foundations: Design Patterns
 Skills covered in this course:   Software Design, Java 
 
 					Course details
-2h 19m Beginner Released: December 13, 2013 8 chapter quizzes
-Design patterns are reusable solutions that solve the challenges software developers face over and over again. 
+2h 19m / Beginner Released: December 13, 2013 / 8 chapter quizzes
+
+	Design patterns are reusable solutions that solve the challenges software developers face over and over again. 
 Rather than reinventing the wheel, learn how to make use of these proven and tested patterns 
-that will make your software more reliable and flexible to change. This course will introduce you 
-to design patterns and take you through seven of the most used object-oriented patterns 
-that will make your development faster and easier. 
-Elisabeth Robson and Eric Freeman, coauthors of Head First Design Patterns, 
+that will make your software more reliable and flexible to change.
+	This course will introduce you to design patterns and take you through seven of 
+the most used object-oriented patterns that will make your development faster and easier. 
+	Elisabeth Robson and Eric Freeman, coauthors of Head First Design Patterns, 
 join forces to provide an overview of each pattern and examples of the pattern in action. 
 Featured design patterns include the strategy, observer, decorator, singleton, collection, state, 
 and factory method patterns. 
