@@ -31,11 +31,13 @@
         Creational (Порождающие) - абстрагируют процесс инстанцирования. Они позволяют сделать систему независимой от способа создания, композиции и представления объектов.
 ----------------------------------------------------------------------------------
 
+
 1. Singleton (Одиночка)
 
 гарантирует, что в однопроцессном приложении будет единственный экземпляр некоторого класса, и предоставляет глобальную точку доступа к этому экземпляру.
 Examples:
 State objects, Facade objects
+
 
 
 2. Factory Method (Фабричный метод/Виртуальный конструктор).
@@ -73,6 +75,7 @@ Factory method pattern uses factory methods to deal with the problem of creating
 This is done by creating objects by calling a factory method—either specified in an interface and implemented by child classes, or implemented in a base class and optionally overridden by derived classes—rather than by calling a constructor.
 
 
+
 3. Abstract Factory (Абстрактная фабрика)
 
 видео-курс:
@@ -86,6 +89,7 @@ This is done by creating objects by calling a factory method—either specified 
         объектов образуются более крупные структуры
 ----------------------------------------------------------------------------------
 
+
 4. Декоратор (Decorator)
 
 предназначенный для динамического подключения дополнительного поведения к объекту.
@@ -94,6 +98,7 @@ This is done by creating objects by calling a factory method—either specified 
 
 Attach additional responsibilities to an object dynamically keeping the same interface.
 Decorators provide a flexible alternative to subclassing for extending functionality.
+
 
 
 5. Адаптер (Adapter, Wrapper, or Translator)
@@ -118,6 +123,7 @@ Decorators provide a flexible alternative to subclassing for extending functiona
 Converts one interface to another so that it matches what the client is expecting.
 
 
+
 6. Фасад (Facade)
 - Скрыть сложную внутреннюю реализацию и предоставить простой интерфейс
 - Упрощение взаимодействия с объектами системы (или нескольких систем)
@@ -139,9 +145,15 @@ Facade - Provides a simplified interface.
         Behavioral (Поведенческие) - определяющие алгоритмы и способы реализации взаимодействия различных объектов и классов.
 ----------------------------------------------------------------------------------
 
-7. Observer or Publish/subscribe (Наблюдатель)
+
+7. Observer/Observable or Publisher/Subscriber (Наблюдатель)
 
 Паблишер оповешает всех своих подписчиков о наступлении некого события.
+
+LinkedIn:
+The Observer Pattern defines a one-to-many dependency between objects so that when one object changes state, all of
+its dependents are notified and updated automatically.
+
 
 
 8. State (Состояние)
@@ -157,6 +169,7 @@ In this pattern, an object can be in exactly one of a fixed number of states, an
 
 The pattern will “allow an object to alter its behavior when its internal state changes. 
 The object will appear to change its class.” - “Gang of Four” book Design Patterns: Elements of Reusable Object-Oriented Software
+
 
 9. Strategy (Стратегия), Policy
 
@@ -179,6 +192,11 @@ The object will appear to change its class.” - “Gang of Four” book Design 
   - Шаблон Strategy определяет семейство алгоритмов.
   - Это позволяет отказаться от использования переключателей и/или условных операторов.
   - Вызов всех алгоритмов должен осуществляться стандартным образом (все они должны иметь одинаковый интерфейс).
+
+LinkedIn: 
+The Strategy Pattern defines a family of algorithms, encapsulates each one, and makes them interchangeable. 
+Strategy lets the algorithm vary independently from clients that use it.
+
 
 
 + 10. Command (Команда)
@@ -206,9 +224,12 @@ What solution does the Command design pattern describe?
 
 This enables to configure a class with a command object that is used to perform a request. The class is no longer coupled to a particular request and has no knowledge (is independent) of how the request is carried out.
 
+
+
 -----------------------------------------------------------------------------
       Partitioning (разбиение, разделение, декомпозиция) design patterns
 -----------------------------------------------------------------------------
+
 
 + 11. Компоновщик (англ. Composite)
 
