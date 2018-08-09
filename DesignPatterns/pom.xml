@@ -13,16 +13,11 @@
 	</properties>
 
 	<build>
-
 		<resources>
 			<resource>
-				<directory>src/main/resources/linkedin</directory>
-				<includes>
-					<include>*test.txt</include>
-				</includes>
+				<directory>src/main/resources/</directory>
 			</resource>
-		</resources>
-		
+		</resources>		
 	</build>
 
 </project>

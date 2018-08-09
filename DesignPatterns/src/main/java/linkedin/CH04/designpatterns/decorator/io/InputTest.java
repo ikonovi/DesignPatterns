@@ -11,9 +11,10 @@ public class InputTest {
 	
 	public static void main(String[] args) throws IOException {
 		int c;
-		String testFile = Paths.get("target" + File.separator + "classes" + File.separator + "test.txt")
+		String testFile = Paths
+				.get("target" + File.separator + "classes" + File.separator + "linkedin" + File.separator + "test.txt")
 				.toAbsolutePath().toString();
-		System.out.println("File Location - "+ testFile);
+		System.out.println("File Location - " + testFile);
 
 		try {
 			InputStream in = 
