@@ -13,7 +13,20 @@ the most used object-oriented patterns that will make your development faster an
 	Elisabeth Robson and Eric Freeman, coauthors of Head First Design Patterns, 
 join forces to provide an overview of each pattern and examples of the pattern in action. 
 Featured design patterns include the strategy, observer, decorator, singleton, collection, state, 
-and factory method patterns. 
+and factory method patterns.
+
+
+MY NOTES: 
+
+	Design Principle #1 - “Encapsulate What Varies”
+Identify the aspects of your code that vary and separate them
+from what stays the same. 
+a shorthand for this principle - that is, "Encapsulate What Varies". 
+	- If some aspect of code is changing: That’s a sign you should pull it out and separate it
+	- By separating out the parts of your code that vary, you can extend or alter them without affecting the rest of
+your code.
+	- This principle is fundamental to almost every design Pattern.
+All patterns let some part of the code vary independently of other parts
 
 
 
